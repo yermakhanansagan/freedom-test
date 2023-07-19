@@ -7,9 +7,9 @@ defineProps(['title', 'description'])
         <div class="info-panel__items-title">
             {{ title }}
         </div>
-        <div class="info-panel__items-description">
+        <p class="info-panel__items-description">
             {{ description }}
-        </div>
+        </p>
     </div>
 </template>
 
@@ -22,5 +22,7 @@ defineProps(['title', 'description'])
     font-size: 24px;
     font-style: normal;
     font-weight: 700;
+}
+.info-panel__items-description {
 }
 </style>

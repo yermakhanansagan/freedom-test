@@ -7,22 +7,22 @@ import BaseButton from '../../../components/BaseButton.vue'
     <div class="welcome-panel">
         <div class="welcome-panel__left">
             <BorderedTextLabel>Онлайн-курс</BorderedTextLabel>
-            <div class="welcome-panel__title__text">
+            <h1 class="welcome-panel__title__text">
                 «Технический анализ» офлайн-курс г. Алматы
-            </div>
-            <div class="welcome-panel__subtitle__text">
+            </h1>
+            <p class="welcome-panel__subtitle__text">
                  Данный курс поможет вам открыть новые возможности совершения прибыльных сделок на фондовом рынке из любой точки мира
-            </div>
+            </p>
             <div class="welcome-panel__buttons">
                 <BaseButton>Записаться на курс</BaseButton>
                 <BaseButton class="welcome-panel__buttons customed-button">
                     Подобрать мне курс 
-                    <img src="../../../assets/right-arrow.svg" alt="arrow">
+                    <img src="@/assets/right-arrow.svg" alt="arrow">
                 </BaseButton>
             </div>
         </div>
         <div class="welcome-panel__right">
-            <img class="welcome-panel__right__image" src="../../../assets/hero-item-image-35.svg" alt="hero-image">
+            <img class="welcome-panel__right__image" src="@/assets/hero-item-image-35.svg" alt="hero-image">
         </div>
     </div>
 </template>
@@ -47,17 +47,12 @@ $brand-additional: #00E183;
     flex: 1;
 }
 
-.welcome-panel__title__text {
-    padding-top: 28px;
-    font-family: GT America LCG;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: 700;
-}
 .welcome-panel__subtitle__text {
     padding-top: 24px;
 }
 .welcome-panel__buttons {
+    margin: 0;
+    padding: 0;
     display: flex;
     align-items: center;
     padding-top: 44px;
