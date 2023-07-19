@@ -10,21 +10,19 @@ import BaseButton from '../../../components/BaseButton.vue'
     </p>
     <div class="overview__vider-container">
         <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+        <BaseButton class="overview-button">Смотреть сейчас <img src="../../../assets/play-icon.svg" alt="play"></BaseButton>
     </div>
-    <BaseButton class="overview-button">Смотреть сейчас <img src="../../../assets/play-icon.svg" alt="play"></BaseButton>
     </InfoBlock>
 </template>
 
 <style scoped lang="scss">
-.overview {
-    position: relative;
-}
 .overview__description {
     width: 40vw;
     text-align: justify;
 }
 .overview__vider-container {
     margin-top: 48px;
+    position: relative;
     iframe{
         width: 60vw;
         height: 480px;
@@ -40,6 +38,7 @@ import BaseButton from '../../../components/BaseButton.vue'
     left: 24px;
     z-index: 2;
     color: #242624;
+    width: fit-content;
     img {
         margin-left: 12px;
     }
