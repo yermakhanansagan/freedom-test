@@ -5,7 +5,9 @@ defineProps(['title'])
 <template>
     <div class="info-block">
         <h1>{{ title }}</h1>
-        <slot></slot>
+        <div>
+            <slot></slot>
+        </div>
     </div>
 </template>
 
@@ -13,5 +15,8 @@ defineProps(['title'])
 .info-block {
     height: fit-content;
     width: fit-content;
+    display: flex;
+    flex-direction: column;
+    position: relative;
 }
 </style>

@@ -23,7 +23,6 @@ $brand-additional: #00E183;
     font-size: 18px;
     border: none;
     height: fit-content;
-    width: fit-content;
 }
 .base-button:hover {
     opacity: 0.5;
