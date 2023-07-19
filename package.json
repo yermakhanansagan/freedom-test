@@ -6,7 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
+    "pretty": "prettier \"**/*{.vue,.js,.jsx,.cjs,.mjs,.ts}\" --ignore-path .gitignore --write"
   },
   "dependencies": {
     "vue": "^3.3.4"
