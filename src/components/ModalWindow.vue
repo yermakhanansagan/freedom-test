@@ -1,14 +1,18 @@
 <script setup>
+import SlideFadeTransition from "@/transitions/SlideFadeTransition.vue";
+
 defineEmits(["close"]);
 </script>
 
 <template>
-  <div class="modal-overlay">
-    <div class="modal">
-      <img class="modal-close" src="@/assets/close.svg" alt="close" @click="$emit('close')" />
-      <slot />
+  <SlideFadeTransition>
+    <div class="modal-overlay">
+      <div class="modal">
+        <img class="modal-close" src="@/assets/close.svg" alt="close" @click="$emit('close')" />
+        <slot />
+      </div>
     </div>
-  </div>
+  </SlideFadeTransition>
 </template>
 
 <style scoped lang="scss">

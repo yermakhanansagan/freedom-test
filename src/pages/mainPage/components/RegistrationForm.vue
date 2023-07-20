@@ -26,7 +26,7 @@ const schema = object({
     .min(6, "6 — более символов")
     .matches(/[a-zA-Z0-9]/, "Минимум 1 цифра, латинские буквы"),
 });
-
+// по названиям функции тут особо не парился так как они особо ничего не делают
 const check = (value) => (isNotReadyToLogin.value = value);
 
 const { handleSubmit } = useForm({ validationSchema: schema });
