@@ -8,7 +8,7 @@ import { ref } from "vue";
 
 defineProps(["isOpen"]);
 
-const registration = ref(false);
+const registration = ref(true);
 </script>
 
 <template>
@@ -24,6 +24,10 @@ const registration = ref(false);
         <p class="form__header-description">Для оформления заказа, заполните поля ниже</p>
         <RegistrationForm v-if="registration" />
         <LoginForm v-else />
+        <p class="form__registrated-text">
+          {{ registration ? "Уже зарегестрированы?" : "Еще не зарегестрированы?" }}
+          <a class="form__login-link" @click="registration = !registration">{{ registration ? "Войти" : "Создать аккаунт" }}</a>
+        </p>
       </div>
     </div>
   </ModalWindow>
@@ -48,6 +52,15 @@ const registration = ref(false);
   margin: 0;
 }
 
+.form__registrated-text {
+  margin-top: 32px;
+  text-align: center;
+}
+.form__login-link {
+  text-decoration: none;
+  color: #00e183;
+  cursor: pointer;
+}
 @media screen and (max-width: 1023px) {
   .registration-modal {
     display: flex;

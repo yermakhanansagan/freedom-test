@@ -20,7 +20,6 @@ $text-primary: #242624;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
-
 body {
   min-height: 100vh;
   margin: 0;
@@ -30,13 +29,16 @@ body {
 h1 {
   font-size: 2.5em;
 }
+
 div {
   box-sizing: border-box;
 }
+
 p {
   padding: 0;
   margin: 0;
 }
+
 #app {
   margin: 0;
   padding: 0;

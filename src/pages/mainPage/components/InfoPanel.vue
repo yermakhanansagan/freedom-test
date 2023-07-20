@@ -22,7 +22,6 @@ const panelText = [
 }
 @media screen and (max-width: 1023px) {
   .info-panel {
-    width: 100%;
     flex-direction: column;
     align-items: start;
     text-align: start;

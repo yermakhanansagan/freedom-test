@@ -45,6 +45,7 @@ defineEmits(["close"]);
   .modal {
     height: 100%;
     overflow-y: auto;
+    padding-bottom: 10%;
   }
 }
 </style>
