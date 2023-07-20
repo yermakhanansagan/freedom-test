@@ -7,14 +7,18 @@ defineProps(["number", "title", "description"]);
     <div class="card__number">
       {{ number }}
     </div>
-    <h3 class="card__title">{{ title }}</h3>
-    <p class="card__description">{{ description }}</p>
+    <h3 class="card__title">
+      {{ title }}
+    </h3>
+    <p class="card__description">
+      {{ description }}
+    </p>
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 .card {
-  width: 320px;
+  width: 260px;
   height: 100%;
   border-radius: 32px;
   background: #f5f5f7;
@@ -39,5 +43,7 @@ defineProps(["number", "title", "description"]);
 
 .card__description {
   margin-top: 16px;
+}
+@media screen and (max-width: 1023px) {
 }
 </style>

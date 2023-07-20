@@ -1,12 +1,14 @@
 <script setup></script>
 
 <template>
-  <p class="rate__old-price">60 000 ₸ / мес</p>
-  <div class="rate__new-price">
-    <h1>30 000</h1>
-    <p>₸/мес</p>
+  <div class="rate__price">
+    <p class="rate__old-price">60 000 ₸ / мес</p>
+    <div class="rate__new-price">
+      <h1>30 000</h1>
+      <p>₸/мес</p>
+    </div>
+    <div class="rate__deadline">цена актуальна до 01.12.2022</div>
   </div>
-  <div class="rate__deadline">цена актуальна до 01.12.2022</div>
 </template>
 
 <style scoped lang="scss">
@@ -24,5 +26,17 @@
   font-size: 14px;
   color: #919399;
   margin-bottom: 32px;
+}
+
+@media screen and (max-width: 1023px) {
+  .rate__price {
+    position: relative;
+  }
+  .rate__deadline {
+    position: absolute;
+    margin: 0;
+    top: 0;
+    right: 0;
+  }
 }
 </style>

@@ -5,11 +5,13 @@ defineProps(["text"]);
 <template>
   <div class="benefit">
     <img src="@/assets/approve.svg" alt="approve" />
-    <p class="benefit__text">{{ text }}</p>
+    <p class="benefit__text">
+      {{ text }}
+    </p>
   </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 .benefit {
   display: flex;
   margin: 16px 0;

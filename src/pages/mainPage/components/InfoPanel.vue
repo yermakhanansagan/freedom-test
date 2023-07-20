@@ -20,4 +20,16 @@ const panelText = [
   display: flex;
   margin: 48px;
 }
+@media screen and (max-width: 1023px) {
+  .info-panel {
+    width: 100%;
+    flex-direction: column;
+    align-items: start;
+    text-align: start;
+    background: #fff;
+    margin: 8px;
+    padding: 0 20px;
+    border-radius: 0 0 32px 32px;
+  }
+}
 </style>

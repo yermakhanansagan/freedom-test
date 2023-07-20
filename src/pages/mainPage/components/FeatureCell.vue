@@ -6,8 +6,12 @@ defineProps(["imgName", "title", "description"]);
   <div class="feature-cell">
     <img class="feature-cell__icon" :src="'/src/assets/' + imgName" :alt="imgName" />
     <div class="feature-cell__texts">
-      <h3 class="feature-cell__title">{{ title }}</h3>
-      <p class="feature-cell__description">{{ description }}</p>
+      <h3 class="feature-cell__title">
+        {{ title }}
+      </h3>
+      <p class="feature-cell__description">
+        {{ description }}
+      </p>
     </div>
   </div>
 </template>
@@ -30,5 +34,16 @@ defineProps(["imgName", "title", "description"]);
 .feature-cell__title {
   padding: 0;
   margin: 0;
+}
+
+@media screen and (max-width: 1023px) {
+  .feature-cell {
+    width: 240px;
+    flex-direction: column;
+  }
+  .feature-cell__texts {
+    margin-left: 0;
+    margin-top: 16px;
+  }
 }
 </style>

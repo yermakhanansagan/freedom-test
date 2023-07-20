@@ -2,7 +2,7 @@
 
 <template>
   <div class="bordered__text">
-    <slot></slot>
+    <slot />
   </div>
 </template>
 

@@ -27,6 +27,14 @@ const benefits = [
 
 <style scoped lang="scss">
 .benefits {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 260px);
+  gap: 16px;
+}
+@media screen and (max-width: 1024px) {
+  .benefits {
+    overflow-x: auto;
+    padding-bottom: 16px;
+  }
 }
 </style>

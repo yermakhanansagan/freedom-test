@@ -4,7 +4,7 @@ defineEmits(["click"]);
 
 <template>
   <button class="base-button" @click="$emit('click')">
-    <slot></slot>
+    <slot />
   </button>
 </template>
 
@@ -22,6 +22,7 @@ $brand-additional: #00e183;
   font-size: 18px;
   border: none;
   height: fit-content;
+  cursor: pointer;
 }
 .base-button:hover {
   opacity: 0.5;

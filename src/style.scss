@@ -22,10 +22,9 @@ $text-primary: #242624;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  min-width: 100vw;
   min-height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
@@ -39,18 +38,8 @@ p {
   margin: 0;
 }
 #app {
-  margin: 0 auto;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
 }

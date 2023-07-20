@@ -39,4 +39,11 @@ const info = [
   grid-template-columns: 1fr 1fr;
   gap: 24px 32px;
 }
+@media screen and (max-width: 1023px) {
+  .courses-for__content {
+    grid-template-columns: repeat(4, 1fr);
+    overflow: auto;
+    padding-bottom: 16px;
+  }
+}
 </style>

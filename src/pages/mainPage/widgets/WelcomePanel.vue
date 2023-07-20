@@ -1,6 +1,11 @@
 <script setup>
-import BorderedTextLabel from "../../../components/BorderedTextLabel.vue";
-import BaseButton from "../../../components/BaseButton.vue";
+import { ref } from "vue";
+
+import BorderedTextLabel from "@/components/BorderedTextLabel.vue";
+import BaseButton from "@/components/BaseButton.vue";
+import RegistrationModal from "./RegistrationModal.vue";
+
+const isOpen = ref(false);
 </script>
 
 <template>
@@ -10,7 +15,7 @@ import BaseButton from "../../../components/BaseButton.vue";
       <h1 class="welcome-panel__title__text">«Технический анализ» офлайн-курс г. Алматы</h1>
       <p class="welcome-panel__subtitle__text">Данный курс поможет вам открыть новые возможности совершения прибыльных сделок на фондовом рынке из любой точки мира</p>
       <div class="welcome-panel__buttons">
-        <BaseButton>Записаться на курс</BaseButton>
+        <BaseButton @click="isOpen = true">Записаться на курс</BaseButton>
         <BaseButton class="welcome-panel__buttons customed-button">
           Подобрать мне курс
           <img src="@/assets/right-arrow.svg" alt="arrow" />
@@ -21,6 +26,9 @@ import BaseButton from "../../../components/BaseButton.vue";
       <img class="welcome-panel__right__image" src="@/assets/hero-item-image-35.svg" alt="hero-image" />
     </div>
   </div>
+  <Teleport to="body">
+    <RegistrationModal v-show="isOpen" @close="isOpen = false" />
+  </Teleport>
 </template>
 
 <style scoped lang="scss">
@@ -30,8 +38,6 @@ $brand-additional: #00e183;
   display: flex;
   background: $background-bg-primary;
   position: relative;
-  top: 0;
-  width: 100vw;
   margin: 0;
   justify-content: space-between;
 }
@@ -70,5 +76,19 @@ $brand-additional: #00e183;
   flex: 1;
   align-items: center;
   justify-content: center;
+}
+
+@media screen and (max-width: 1023px) {
+  .welcome-panel {
+    flex-direction: column;
+    border-radius: 0 0 32px 32px;
+  }
+  .welcome-panel__buttons {
+    flex-direction: column;
+  }
+
+  .customed-button {
+    flex-direction: row;
+  }
 }
 </style>

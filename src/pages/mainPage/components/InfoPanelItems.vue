@@ -23,6 +23,10 @@ defineProps(["title", "description"]);
   font-style: normal;
   font-weight: 700;
 }
-.info-panel__items-description {
+
+@media screen and (max-width: 1023px) {
+  .info-panel__item {
+    text-align: start;
+  }
 }
 </style>

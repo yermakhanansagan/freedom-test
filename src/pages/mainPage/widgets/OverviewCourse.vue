@@ -10,8 +10,8 @@ import BaseButton from "../../../components/BaseButton.vue";
       возможности для сохранения и приумножения капитала.
     </p>
     <div class="overview__vider-container">
-      <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
-      <BaseButton class="overview-button">Смотреть сейчас <img src="../../../assets/play-icon.svg" alt="play" /></BaseButton>
+      <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY" />
+      <BaseButton class="overview-button"> Смотреть сейчас <img src="../../../assets/play-icon.svg" alt="play" /> </BaseButton>
     </div>
   </InfoBlock>
 </template>
@@ -42,6 +42,17 @@ import BaseButton from "../../../components/BaseButton.vue";
   width: fit-content;
   img {
     margin-left: 12px;
+  }
+}
+@media screen and (max-width: 1023px) {
+  .overview__description {
+    width: 100%;
+  }
+  .overview__vider-container {
+    iframe {
+      width: 100%;
+      border-radius: 32px;
+    }
   }
 }
 </style>
