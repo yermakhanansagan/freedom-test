@@ -11,7 +11,8 @@
     "pretty": "prettier \"**/*{.vue,.js,.jsx,.cjs,.mjs,.ts}\" --ignore-path .gitignore --write"
   },
   "dependencies": {
-    "vue": "^3.3.4"
+    "vue": "^3.3.4",
+    "yup": "^1.2.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.2.3",
@@ -21,6 +22,7 @@
     "eslint-plugin-vue": "^9.15.1",
     "prettier": "^3.0.0",
     "sass": "^1.64.0",
+    "vee-validate": "^4.10.7",
     "vite": "^4.4.4",
     "vue-eslint-parser": "^9.3.1"
   }

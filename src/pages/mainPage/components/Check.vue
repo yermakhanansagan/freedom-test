@@ -1,8 +1,14 @@
-<script setup></script>
+<script setup>
+import { ref } from "vue";
+
+defineEmits(["check"]);
+
+const checked = ref(false);
+</script>
 
 <template>
   <div class="registration-modal__form__check">
-    <input id="check" type="checkbox" name="check" />
+    <input id="check" type="checkbox" name="check" v-model="checked" @click="$emit('check', checked)" />
     <label for="check">Я подтверждаю, что ознакомлен и согласен с условиями оферты и даю своё согласие на сбор и обработку персональных данных</label>
   </div>
 </template>

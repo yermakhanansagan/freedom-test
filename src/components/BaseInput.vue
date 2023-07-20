@@ -1,7 +1,7 @@
 <script setup>
 import { computed } from "vue";
-
-const props = defineProps(["modelValue", "label", "type"]);
+import { Field, ErrorMessage } from "vee-validate";
+const props = defineProps(["modelValue", "label", "type", "name"]);
 defineEmits(["update:modelValue"]);
 
 const isValueExist = computed(() => props.modelValue.length);
@@ -9,16 +9,18 @@ const isValueExist = computed(() => props.modelValue.length);
 
 <template>
   <div class="base-input__container">
-    <input
+    <Field
       id="input"
       class="base-input"
       :class="{ 'with-value': isValueExist }"
       :type="type"
       :value="modelValue"
       :placeholder="label"
+      :name="name"
       @input="$emit('update:modelValue', (modelValue = $event.target.value))"
     />
     <label v-if="isValueExist" class="base-input__label" for="input">{{ label }}</label>
+    <ErrorMessage class="base-input__error-message" :name="name" />
   </div>
 </template>
 
@@ -45,6 +47,11 @@ const isValueExist = computed(() => props.modelValue.length);
   color: #919399;
 }
 
+.base-input__error-message {
+  color: red;
+  font-size: 14px;
+  margin-left: 20px;
+}
 .with-value {
   padding: 22px 0 10px 20px;
 }
